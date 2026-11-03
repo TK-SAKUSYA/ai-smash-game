@@ -141,6 +141,16 @@ button,input,select,textarea{pointer-events:auto}
 .overlay.hidden{pointer-events:none!important}
 .overlay:not(.hidden){pointer-events:auto}
 </style>
+<style id="home-menu-click-layer-fix">
+/* Put the home menu above the canvas, HUD and touch-control layers. */
+.arena{position:relative}
+#overlay{position:absolute!important;inset:0!important;z-index:30!important;display:grid;place-items:center;pointer-events:auto!important}
+#overlay.hidden{display:none!important;pointer-events:none!important}
+#overlay:not(.hidden){visibility:visible!important;opacity:1!important}
+#overlay .home-card,#overlay .home-copy,#overlay .mode-list{position:relative;z-index:31;pointer-events:auto!important}
+#overlay button{position:relative;z-index:32;pointer-events:auto!important;touch-action:manipulation}
+#touchControls,#touchControls .touch-pad{z-index:4}
+</style>
 </head>
 <body><main class="shell">
 <header><div><div class="eyebrow">LOCAL VS · 2 PLAYERS</div><h1 class="title" style="font-size:clamp(12px,3.5vw,30px);letter-spacing:0;white-space:normal;line-height:1.08;max-width:52vw;overflow-wrap:anywhere">Battle＆Intelligence <span style="font-size:.62em;white-space:nowrap">ver.1.1</span></h1></div><div style="display:flex;gap:8px;align-items:center"><div class="badge" id="coinBadge">🪙 <b id="coinCount">0</b></div><div class="badge" id="modeBadge">🌌 星降るアリーナ</div></div></header>
