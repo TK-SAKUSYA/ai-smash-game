@@ -186,6 +186,14 @@ body{background:radial-gradient(ellipse at 50% 0,#40506c 0,#171f31 55%,#090d17 1
 button:focus-visible{outline:3px solid #ffe16a!important;outline-offset:3px}
 @media(max-width:650px){#overlay .home-card{width:96%!important}.home-card.is-selection .home-copy{max-height:min(70dvh,600px)!important}.roster-card{min-height:68px}.screen-title{font-size:clamp(25px,7vw,38px)}}
 </style>
+
+<style id="fix-clipped-ui-borders">
+/* Restore complete outlines on panels and buttons: no clipping of border corners. */
+#overlay .home-card{clip-path:none!important;overflow:visible!important}
+#overlay .mode-button:nth-child(odd){clip-path:none!important}
+#overlay .mode-button,#overlay .collection-button,#overlay .roster-card,#overlay .character-book-card,#overlay .stage-card,#overlay .rule-button,#overlay .settings-button,#overlay .shop-item{outline-offset:0;overflow:visible}
+#overlay .home-card{box-sizing:border-box}
+</style>
 </head>
 <body><main class="shell">
 <header><div><div class="eyebrow">LOCAL VS · 2 PLAYERS</div><h1 class="title" style="font-size:clamp(12px,3.5vw,30px);letter-spacing:0;white-space:normal;line-height:1.08;max-width:52vw;overflow-wrap:anywhere">Battle＆Intelligence <span style="font-size:.62em;white-space:nowrap">ver.1.1</span></h1></div><div style="display:flex;gap:8px;align-items:center"><div class="badge" id="coinBadge">🪙 <b id="coinCount">0</b></div><div class="badge" id="modeBadge">🌌 星降るアリーナ</div></div></header>
